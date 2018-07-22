@@ -1,0 +1,424 @@
+body {
+    font: 16px/1.5 Arial, Helvetica, sans-serif;
+	padding: 0;
+	margin: 0;
+	background-color: #000;
+    width: 100%;
+    height: 100%;
+}
+
+img, 
+embed, 
+object, 
+video {
+	max-width: 100%;
+}
+
+.title {
+	font-size: 1.6rem;
+	text-align: center;
+	color: #e5e5e5;
+}
+
+.subtitle {
+	font-size: 1.4rem;
+	text-align: center;
+	color: #e5e5e5;
+}
+
+.paragraph {
+	width: 80%;
+	margin: auto;
+	font-size: 1.2rem;
+	padding: .8rem;
+	color: #b2b2b2;
+}
+
+.header{
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: stretch;
+	align-items: flex-end;
+    border-bottom: #efc514 1.2px solid;
+}
+
+.logo {
+	max-width: 320px;
+	margin: 1rem 1rem .3rem 2.6rem;
+}
+
+.navigation {
+	flex-grow: 1;
+	align-items: flex-end;
+	margin: 0 1rem 0 0;
+}
+
+.ul-nav {
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	list-style-type: none;
+	justify-content: flex-end;
+	align-content: flex-end;
+	box-sizing: border-box;
+	padding-left: 0;
+}
+
+.current {
+	text-decoration: none;
+	list-style: none;
+	padding: .6rem 2rem;
+	text-align: center;
+	color: #efc514;
+	font-size: 1.3rem;
+	font-weight: bold;
+    height: 100%;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.a-nav {
+	text-decoration: none;
+	list-style: none;
+	padding: .6rem 2rem;
+	text-align: center;
+	color: #e5e5e5;
+	font-size: 1.3rem;
+	font-weight: bold;
+    height: 100%;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.a-nav:hover {
+	color: #ccc;
+}
+
+.main {
+	background-color: #191919;
+	margin: 0;
+	padding: 0;
+	min-height: 41rem;
+	box-sizing: border-box;
+}
+
+
+.banner-container {
+	position: relative;
+/*	width: 100%;
+	height: 100%;
+	background-image: url("../img/banner.jpg");
+	background-size: cover;
+    box-shadow: 0 1px 4px rgba(102, 102, 102, .9);	
+    padding: 0;
+    margin: 0;
+    background-position: center;
+    opacity: .9;*/
+}
+
+.banner {
+	width: 100%;
+	box-shadow: 0 0 70px rgba(102, 102, 102, .4);
+}
+
+.banner-header {
+	position: absolute;
+	top: 1vw;
+	left: 2vw;
+	margin: 0;
+	color: #e5e5e5;
+	font-size: 3vw;
+	font-family: "Times, Times New Roman", serif;
+	padding: 4rem 2rem 4rem 6rem;
+}
+
+.hidden-header-container {
+	display: none;
+	margin: 0;
+	padding: 0;
+}
+
+.intro-container,
+.motorbike-container,
+.construction-container,
+.safety-container {
+	padding: 2.6rem 0 4rem 0;
+}
+
+.icon-title {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 0;
+}
+
+.fab,
+.fas,
+.far {
+	color: #efc514;
+	font-size: 2.2rem;
+	padding: 1rem;
+}
+
+.article {
+	color: #fff;		
+    width: 60%;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+	margin-left: auto;
+	margin-right: auto;
+	box-sizing: border-box;
+}
+
+.footer {
+    border-top: #efc514 .8px solid;	
+    color: #fff;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.footer-img {
+	max-width: 170px;
+	margin: .4rem;
+}
+
+.copyright {
+	margin: 0;
+	font-size: 0.7rem;
+	color: #999;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2.2s;
+  animation-name: fade;
+  animation-duration: 2.2s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+@media screen and (max-width: 480px) {
+	.logo {
+		margin: auto;
+		padding: .5rem .5rem 0;
+	}
+
+	.navigation {
+		margin: auto;
+	}
+
+	.ul-nav {
+		flex-direction: column;
+		width: 100%;
+		justify-content: stretch;
+		align-items: center;
+		align-content: center;
+		box-sizing: content-box;
+		padding: .7rem 0 0;
+	}
+
+	.a-nav,
+	.current {
+		font-size: 1.4rem;
+		align-self: center;
+	}
+
+	.banner-header {
+		padding: 0;
+		visibility: hidden;
+	}
+
+	.hidden-header-container {
+		display: block;
+		text-align: center;
+		margin: .5rem 0 2rem 0;
+	}
+
+	.hidden-header {
+		display: inline;
+		margin: 0;
+		font-size: 1.5;
+		font-family: "Times, Times New Roman", serif;
+		font-style: oblique;
+		padding: 0 .5rem;
+	}
+
+	.intro-container {
+		padding: 0 .4rem;
+	}
+
+	.motorbike-container,
+	.construction-container,
+	.safety-container {
+		padding-bottom: 0;
+	}
+
+	.article {
+		width: 100%;
+		padding-top: 1.6rem;
+	}
+
+	.title {
+		font-size: 1.2rem;
+	}
+
+	.subtitle {
+		font-size: 1.1rem;
+		padding-right: .5rem;
+	}
+
+	.paragraph {
+		font-size: 1rem;
+		margin-left: 1.8rem;
+		margin-right: 0;
+	}
+}
+
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+	.logo {
+		margin: auto;
+		padding: .5rem .5rem 0;
+	}
+
+	.navigation {
+		margin: auto;
+	}
+
+	.ul-nav {
+		flex-direction: column;
+		width: 100%;
+		justify-content: stretch;
+		align-items: center;
+		align-content: center;
+		box-sizing: content-box;
+		padding: .7rem 0 0;
+	}
+
+	.a-nav,
+	.current {
+		font-size: 1.3rem;
+		align-self: center;
+	}
+
+	.banner-header {
+		padding: 0;
+		visibility: hidden;
+	}
+
+	.hidden-header-container {
+		display: block;
+		text-align: center;
+		margin: .5rem 0 2rem 0;
+	}
+
+	.hidden-header {
+		display: inline;
+		margin: 0;
+		font-size: 1.5;
+		font-family: "Times, Times New Roman", serif;
+		font-style: oblique;
+		padding: 0 .5rem;
+	}
+
+	.intro-container {
+		padding: 0 .4rem;
+	}
+
+	.motorbike-container,
+	.construction-container,
+	.safety-container {
+		padding-bottom: 0;
+	}
+
+	.article {
+		width: 90%;
+		padding: 1.6rem 0 3rem;
+		box-sizing: border-box;
+	}
+
+	.title {
+		font-size: 1.2rem;
+	}
+
+	.subtitle {
+		font-size: 1.1rem;
+		padding-right: .5rem;
+	}
+
+	.paragraph {
+		font-size: 1rem;
+		margin-left: 3rem;
+		margin-right: 0;
+		width: 87%;
+	}
+}	
+
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+	.navigation {
+		margin-right: 0;
+	}
+
+	.a-nav,
+	.current {
+		padding-left: .96rem;
+		padding-right: .96rem;
+		font-size: 1.2rem;
+	}
+
+	.ul-nav {
+		justify-content: space-around;
+	}
+
+	.article {
+		width: 95%;
+	}
+
+	.banner-header {
+		padding: 3rem 2rem 4rem 5rem;
+	}
+}
+
+
+@media screen and (min-width: 1025px) and (max-width: 1254px) {
+	.article {
+		width: 90%
+	}
+
+	.ul-nav {
+		justify-content: space-around;
+	}
+
+	.navigation {
+		padding-left: .73rem;
+		padding-right: .73rem;
+	}
+}
+
+
+@media screen and (min-width: 1255px) and (max-width: 1440px) {
+	.article {
+		width: 80%;
+	}
+
+}
+
+
+@media screen and (min-width: 1441px) and (max-width: 1639px) {
+	.article {
+		width: 70%;
+	}
+}
